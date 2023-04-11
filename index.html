@@ -3,33 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <title>Quote Image Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Quote to Image Generator</title>
 </head>
 <body>
     <div class="container">
-        <h1>Quote to Image Generator</h1>
-        <textarea id="quote-input" placeholder="Enter your quote here"></textarea>
+        <textarea id="quote-input" placeholder="Type your quote here..."></textarea>
         <div class="customization-options">
-            <div class="background-options">
-                <label for="background1" class="gradient-option">
-                    <input type="radio" id="background1" name="background" value="1" checked>
-                </label>
-                <label for="background2" class="gradient-option">
-                    <input type="radio" id="background2" name="background" value="2">
-                </label>
-            </div>
-            <div class="text-style-options">
+            <div id="background-options" class="background-options"></div>
+            <!-- Gradient buttons will be generated here -->
+            
+            <!-- <div class="text-style-options">
                 <input type="checkbox" id="bold" name="bold">
                 <label for="bold">Bold</label>
                 <input type="checkbox" id="italic" name="italic">
                 <label for="italic">Italic</label>
+            </div> -->
+        </div>
+            
+            <canvas id="output-canvas"></canvas>
+            <div class="buttons-container">
+                <!-- <button id="download-btn" disabled>Download</button> -->
+                <button id="copy-btn">Copy to Clipboard</button>
             </div>
         </div>
-        <canvas id="output-canvas" width="1200" height="628"></canvas>
-        <button id="download-btn" disabled>Download Image</button>
+
     </div>
+    <script src="config.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
